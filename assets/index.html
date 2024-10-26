@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Preference</title>
+</head>
+<body>
+    <section id="author">
+        <h2>About the Author!</h2>
+        <p>
+            My name is JoyAnna H. I may be small but I love food!
+        </p>
+    </section>
+    <h3>Food Preferences</h3>
+    <form>
+        <fieldset>
+          <legend>Select your dietary preferences</legend>
+          <label for="music">
+            <input type="checkbox" name="vegetarian" value="vegetarian" id="vegetarian">
+            Vegetarian
+          </label>
+          <br>
+          <label for="vegan">
+            <input type="checkbox" name="vegan" value="vegan" id="vegan">
+            Vegan
+          </label>
+          <br>
+          <label for="gluten">
+            <input type="checkbox" name="gluten" value="gluten" id="gluten">
+            Gluten-Free
+        </fieldset>
+    </form>
+    <form>
+        <fieldset>
+          <legend>Select your favorite cusine:</legend>
+          <label for="cusine">
+            <input type="radio" name="italian" value="italian" id="italian">
+            Italian
+          </label>
+          <br>
+          <label for="mexican">
+            <input type="radio" name="mexican" value="mexican" id="mexican">
+            Mexican
+          </label>
+          <br>
+          <label for="asian">
+            <input type="radio" name="asian" value="asian" id="asian">
+            Asian
+        </fieldset>
+        <br>
+        Favorite Food:
+        <label for="typebox">
+            <input type="text" placeholder="Enter your favorite food" name="typebox" id="typebox">
+          </label>
+          <br>
+          Additional Notes:
+          <br>
+          <textarea rows="3" cols="50" placeholder="Add any specific dietary requirements or comments"></textarea><br>
+          Number of Meals Per Day:
+          <input type="number" id="quantity" name="quantity" min="1" max="3">
+          <br>
+          Favorite Dish (Max 10 characters): 
+          <input type="text" id="favdish" name="favdish" minlength="0" maxlength="10">
+          <br>
+          Unavailable Food Item: 
+          <input type="text" placeholder="Out Of Stock" name="outofstock" id="outofstock" disabled>
+          <br>
+          Read-only Information: 
+          <input type="text" placeholder="You can only read this" name="readonly" id="readonly" readonly>
+          <br>
+          Total Calories Consumed:<br>
+          <form id="calorieForm">
+            <label for="calorieCount"></label>
+            <input type="range" id="calorieCount" name="calorieCount" min="0" max="1000" step="10" value="100" 
+                   oninput="document.getElementById('calorieDisplay').textContent = this.value">
+            <span id="calorieDisplay"><input type="text" placeholder="   " name="typebox" id="typebox"></span> Calories
+          <br>
+          Preferred Beverage: 
+          <br>
+          Non-Alcoholic Choices:
+          <label for="prefbev">
+            <select name="prefbev" id="prefbev">
+              <option value="placeholder">Select One</option>
+              <option value="water">Water</option>
+              <option value="soda">Soda</option>
+              <option value="juice">Juice</option>
+              <option value="hottea">Hot Tea</option>
+              <option value="coffee">Coffee</option>
+              <option value="icedtea">Iced Tea</option>
+              <option value="milk">Milk</option>
+            </select>
+          </label>
+          <br>
+          Alcoholic Choices:
+          <label for="alcoholicbev">
+            <select name="alcoholicbev" id="alcoholicbev">
+              <option value="placeholder">Select One</option>
+              <option value="wine">Wine</option>
+              <option value="whiskey">Whiskey<option>
+              <option value="rum">Rum</option>
+              <option value="vodka">Vodka</option>
+            </select>
+          </label>
+          <br>
+          <button type="submit">
+            Submit
+          </button>
+    </form>
+</body>
+</html>
